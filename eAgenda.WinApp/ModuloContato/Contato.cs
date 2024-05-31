@@ -1,4 +1,5 @@
 ﻿using eAgenda.ConsoleApp.Compartilhado;
+using eAgenda.WinApp.Compartilhado;
 
 namespace eAgenda.WinApp.ModuloContato
 {
@@ -26,11 +27,11 @@ namespace eAgenda.WinApp.ModuloContato
             if (string.IsNullOrEmpty(Nome.Trim()))
                 erros.Add("O campo \"nome\" é obrigatório");
 
-            if (string.IsNullOrEmpty(Telefone.Trim()))
-                erros.Add("O campo \"telefone\" é obrigatório");
-
             if (string.IsNullOrEmpty(Email.Trim()))
                 erros.Add("O campo \"email\" é obrigatório");
+
+            if (string.IsNullOrEmpty(Telefone.Trim()))
+                erros.Add("O campo \"telefone\" é obrigatório");
 
             if (string.IsNullOrEmpty(Cargo.Trim()))
                 erros.Add("O campo \"cargo\" é obrigatório");
@@ -54,7 +55,7 @@ namespace eAgenda.WinApp.ModuloContato
 
         public override string ToString()
         {
-            return $"Id: {Id}, Nome: {Nome}, Telefone: {Telefone}, Email: {Email} Empresa: {Empresa}, Cargo: {Cargo}";
+            return Nome.ToTitleCase();
         }
     }
 }
