@@ -1,7 +1,7 @@
 ﻿using eAgenda.ConsoleApp.Compartilhado;
 using eAgenda.WinApp.Compartilhado;
 
-namespace eAgenda.WinApp.ModuloCategoria
+namespace eAgenda.WinApp.ModuloDespesaCategoria
 {
     public class Categoria : EntidadeBase
     {

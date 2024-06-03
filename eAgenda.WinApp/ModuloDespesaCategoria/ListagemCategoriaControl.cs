@@ -1,4 +1,4 @@
-﻿namespace eAgenda.WinApp.ModuloCategoria
+﻿namespace eAgenda.WinApp.ModuloDespesaCategoria
 {
     public partial class ListagemCategoriaControl : UserControl
     {

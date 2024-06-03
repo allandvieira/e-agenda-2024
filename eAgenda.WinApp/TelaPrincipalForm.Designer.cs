@@ -45,8 +45,8 @@
             btnConcluirItens = new ToolStripButton();
             lblTipoCadastro = new ToolStripLabel();
             pnlRegistros = new Panel();
-            despesasToolStripMenuItem = new ToolStripMenuItem();
             categoriasToolStripMenuItem = new ToolStripMenuItem();
+            despesasToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // cadastrosToolStripMenuItem
             // 
-            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { contatosMenuItem, compromissosMenuItem, tarefasToolStripMenuItem, despesasToolStripMenuItem, categoriasToolStripMenuItem });
+            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { contatosMenuItem, compromissosMenuItem, tarefasToolStripMenuItem, categoriasToolStripMenuItem, despesasToolStripMenuItem });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             cadastrosToolStripMenuItem.Size = new Size(86, 24);
             cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -207,18 +207,19 @@
             pnlRegistros.Size = new Size(800, 356);
             pnlRegistros.TabIndex = 3;
             // 
+            // categoriasToolStripMenuItem
+            // 
+            categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            categoriasToolStripMenuItem.Size = new Size(180, 24);
+            categoriasToolStripMenuItem.Text = "Categorias";
+            categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
+            // 
             // despesasToolStripMenuItem
             // 
             despesasToolStripMenuItem.Name = "despesasToolStripMenuItem";
             despesasToolStripMenuItem.Size = new Size(180, 24);
             despesasToolStripMenuItem.Text = "Despesas";
             despesasToolStripMenuItem.Click += despesasToolStripMenuItem_Click;
-            // 
-            // categoriasToolStripMenuItem
-            // 
-            categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(180, 24);
-            categoriasToolStripMenuItem.Text = "Categorias";
             // 
             // TelaPrincipalForm
             // 
@@ -265,7 +266,7 @@
         private ToolStripMenuItem tarefasToolStripMenuItem;
         private ToolStripButton btnAdicionarItens;
         private ToolStripButton btnConcluirItens;
-        private ToolStripMenuItem despesasToolStripMenuItem;
         private ToolStripMenuItem categoriasToolStripMenuItem;
+        private ToolStripMenuItem despesasToolStripMenuItem;
     }
 }

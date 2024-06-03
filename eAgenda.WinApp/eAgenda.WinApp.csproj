@@ -9,6 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="ModuloDespesaCategoria\ListagemDespesaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ModuloDespesaCategoria\TabelaDespesaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ModuloDespesaCategoria\TelaDespesaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

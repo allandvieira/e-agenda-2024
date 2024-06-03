@@ -1,28 +1,29 @@
 ﻿using eAgenda.ConsoleApp.Compartilhado;
 using eAgenda.WinApp.Compartilhado;
-using eAgenda.WinApp.ModuloCategoria;
 
-namespace eAgenda.WinApp.ModuloDespesa
+namespace eAgenda.WinApp.ModuloDespesaCategoria
 {
     public class Despesa : EntidadeBase
     {
         public string Nome { get; set; }
-        public string Valor { get; set; }
+        public int Valor { get; set; }
         public DateTime Data { get; set; }
         public Categoria Categoria { get; set; }
-        public ComboBox Pagamento { get; internal set; }
+        public string Pagamento { get; set; }
 
         public Despesa(
             string nome,
             string valor,
             DateTime data,
-            Categoria categoria
+            Categoria categoria,
+            string pagamento
         )
         {
             Nome = nome;
-            Valor = valor;
+            Valor = int.TryParse(valor, out int valorInt) ? valorInt : 0;
             Data = data;
             Categoria = categoria;
+            Pagamento = pagamento;
         }
 
         public override List<string> Validar()
@@ -32,10 +33,10 @@ namespace eAgenda.WinApp.ModuloDespesa
             if (string.IsNullOrEmpty(Nome.Trim()))
                 erros.Add("O campo \"nome\" é obrigatório");
 
-            if (string.IsNullOrEmpty(Valor.Trim()))
-                erros.Add("O campo \"valor\" é obrigatório");
+            if (Valor == 0)
+                erros.Add("O campo \"valor\" é obrigatório e deve ser um número inteiro");
 
-            if (Pagamento == null)
+            if (string.IsNullOrEmpty(Pagamento))
                 erros.Add("O campo \"pagamento\" é obrigatório");
 
             if (Categoria == null)
@@ -52,6 +53,7 @@ namespace eAgenda.WinApp.ModuloDespesa
             Valor = atualizado.Valor;
             Data = atualizado.Data;
             Categoria = atualizado.Categoria;
+            Pagamento = atualizado.Pagamento;
         }
 
         public override string ToString()
@@ -60,4 +62,3 @@ namespace eAgenda.WinApp.ModuloDespesa
         }
     }
 }
-

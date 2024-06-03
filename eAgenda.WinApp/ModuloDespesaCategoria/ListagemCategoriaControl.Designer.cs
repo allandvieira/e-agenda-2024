@@ -1,4 +1,4 @@
-﻿namespace eAgenda.WinApp.ModuloCategoria
+﻿namespace eAgenda.WinApp.ModuloDespesaCategoria
 {
     partial class ListagemCategoriaControl
     {
@@ -34,8 +34,9 @@
             // listCategorias
             // 
             listCategorias.Dock = DockStyle.Fill;
+            listCategorias.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listCategorias.FormattingEnabled = true;
-            listCategorias.ItemHeight = 15;
+            listCategorias.ItemHeight = 20;
             listCategorias.Location = new Point(0, 0);
             listCategorias.Name = "listCategorias";
             listCategorias.Size = new Size(563, 276);

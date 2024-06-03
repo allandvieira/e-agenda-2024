@@ -1,4 +1,4 @@
-﻿namespace eAgenda.WinApp.ModuloCategoria
+﻿namespace eAgenda.WinApp.ModuloDespesaCategoria
 {
     partial class TabelaCategoriaControl
     {

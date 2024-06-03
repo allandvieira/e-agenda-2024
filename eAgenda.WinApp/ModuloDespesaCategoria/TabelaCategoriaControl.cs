@@ -1,6 +1,6 @@
 ﻿using eAgenda.WinApp.Compartilhado;
 
-namespace eAgenda.WinApp.ModuloCategoria
+namespace eAgenda.WinApp.ModuloDespesaCategoria
 {
     public partial class TabelaCategoriaControl : UserControl
     {

@@ -1,4 +1,4 @@
-﻿namespace eAgenda.WinApp.ModuloCategoria
+﻿namespace eAgenda.WinApp.ModuloDespesaCategoria
 {
     partial class TelaCategoriaForm
     {
@@ -46,6 +46,7 @@
             btnGravar.TabIndex = 3;
             btnGravar.Text = "Gravar";
             btnGravar.UseVisualStyleBackColor = true;
+            btnGravar.Click += btnGravar_Click;
             // 
             // btnCancelar
             // 
