@@ -2,6 +2,8 @@ using eAgenda.WinApp.Compartilhado;
 using eAgenda.WinApp.ModuloCompromisso;
 using eAgenda.WinApp.ModuloContato;
 using eAgenda.WinApp.ModuloTarefa;
+using eAgenda.WinApp.ModuloDespesa;
+using eAgenda.WinApp.ModuloCategoria;
 
 namespace eAgenda.WinApp
 {
@@ -12,6 +14,8 @@ namespace eAgenda.WinApp
         RepositorioContato repositorioContato;
         RepositorioCompromisso repositorioCompromisso;
         RepositorioTarefa repositorioTarefa;
+        RepositorioDespesa repositorioDespesa;
+        RepositorioCategoria repositorioCategoria;
 
         public static TelaPrincipalForm Instancia { get; private set; }
 
@@ -24,6 +28,8 @@ namespace eAgenda.WinApp
             repositorioContato = new RepositorioContato();
             repositorioCompromisso = new RepositorioCompromisso();
             repositorioTarefa = new RepositorioTarefa();
+            repositorioDespesa = new RepositorioDespesa();
+            repositorioCategoria = new RepositorioCategoria();
 
             CadastrarRegistrosTeste();
         }
@@ -50,6 +56,20 @@ namespace eAgenda.WinApp
         private void tarefasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorTarefa(repositorioTarefa);
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+
+        private void despesasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorDespesa(repositorioDespesa);
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorCategoria(repositorioCategoria, repositorioDespesa);
 
             ConfigurarTelaPrincipal(controlador);
         }

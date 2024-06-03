@@ -44,7 +44,7 @@
             txtTituloItem.Location = new Point(68, 54);
             txtTituloItem.Name = "txtTituloItem";
             txtTituloItem.Size = new Size(239, 27);
-            txtTituloItem.TabIndex = 8;
+            txtTituloItem.TabIndex = 0;
             // 
             // label1
             // 
@@ -64,7 +64,7 @@
             listItensTarefa.Location = new Point(12, 101);
             listItensTarefa.Name = "listItensTarefa";
             listItensTarefa.Size = new Size(384, 164);
-            listItensTarefa.TabIndex = 10;
+            listItensTarefa.TabIndex = 2;
             // 
             // btnAdicionar
             // 
@@ -72,7 +72,7 @@
             btnAdicionar.Location = new Point(313, 54);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(83, 27);
-            btnAdicionar.TabIndex = 11;
+            btnAdicionar.TabIndex = 1;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
             btnAdicionar.Click += btnAdicionar_Click;
@@ -104,7 +104,7 @@
             btnGravar.Location = new Point(190, 296);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(100, 37);
-            btnGravar.TabIndex = 15;
+            btnGravar.TabIndex = 4;
             btnGravar.Text = "Gravar";
             btnGravar.UseVisualStyleBackColor = true;
             btnGravar.Click += btnGravar_Click;
@@ -116,7 +116,7 @@
             btnCancelar.Location = new Point(296, 296);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(100, 37);
-            btnCancelar.TabIndex = 14;
+            btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
